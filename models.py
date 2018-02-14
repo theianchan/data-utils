@@ -1,5 +1,4 @@
 import numpy as np
-import pandas as pd
 
 def root_mean_squared_error(y_pred, y):
     """Calculates root mean squared error"""
