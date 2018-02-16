@@ -1,5 +1,6 @@
 import numpy as np
 
+
 def root_mean_squared_error(y_pred, y):
     """Calculates root mean squared error"""
 
@@ -16,9 +17,9 @@ def lm_evaluate(lm, x=None, y=None):
         lm.intercept_, lm.coef_
     ))
     if (x is not None) and (y is not None):
-        r_squared = lm.score(x, y)
+        score = lm.score(x, y)
         rmse = root_mean_squared_error(lm.predict(x), y)
-        print("R-Squared Value: {}\nRMSE: {}".format(
-            r_squared, rmse
+        print("Accuracy: {}\nRMSE: {}".format(
+            score, rmse
         ))
-        return (r_squared, rmse)
+        return (score, rmse)
